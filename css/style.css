@@ -1,0 +1,104 @@
+@import './reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+body{
+   background-color: rgb(44, 71, 94);
+   font-family: 'Share Tech Mono', monospace;
+}
+
+.wrapper{
+   margin: 200px auto ;
+   width: 400px;
+}
+
+.calc {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding-top: 40px;
+   padding-bottom: 40px;
+   border-radius: 10px;
+   background-color: rgba(213, 230, 215, 0.589);
+   font-size: 20px;
+}
+
+.calc input{
+   border-radius: 5px;
+}
+
+input[type='number']{
+   width: 250px;
+   height: 40px;
+   padding-right: 10px;
+   padding-left: 10px;
+   transition: background-color 500ms;
+}
+
+input[type='number']:hover,
+input[type='number']:focus,
+input[type = submit]:hover,
+.btn-reset:hover
+{
+   background-color: antiquewhite;
+   transition: background-color 500ms;
+}
+
+.calc__actions {
+   display: flex;
+   flex-wrap: wrap;
+   column-gap: 10px;
+   row-gap: 10px;
+   width: 90px;
+   margin-bottom: 40px;
+}
+
+.calc__item{
+   margin-bottom: 20px;
+}
+
+input[type = submit],
+.calc__wrapper-result button
+{
+   padding-left: 11px;
+   padding-right: 11px;
+   background-color: white;
+   flex-shrink: 0;
+   font-size: 30px;
+}
+
+input[type = submit]:active,
+.btn-reset:active{
+   background-color: rgb(105, 82, 52);
+   color: white;
+}
+
+.calc__wrapper-result{
+   display: flex;
+   column-gap:1px;
+}
+
+.calc__wrapper-result > *{
+   flex-shrink: 0;
+}
+
+.btn-reset{
+   border-radius:0 5px 5px 0;
+}
+
+.calc__result {
+   width: 200px;
+   height: 40px;
+   padding-right: 10px;
+   padding-left: 10px;
+   border-radius: 5px 0 0 5px;
+   background-color: white;
+   line-height: 40px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
